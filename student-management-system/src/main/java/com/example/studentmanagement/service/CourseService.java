@@ -42,12 +42,6 @@ public class CourseService {
         return courses.stream().map(this::toResponse).toList();
     }
 
-    @Transactional(readOnly = true)
-    public Course getCourse(Long id) {
-        return courseRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Course not found: " + id));
-    }
-
     private void apply(Course course, CourseRequest request) {
         course.setName(request.name().trim());
         course.setDescription(request.description());

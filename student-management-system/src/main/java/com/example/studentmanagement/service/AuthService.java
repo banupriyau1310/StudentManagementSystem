@@ -29,7 +29,7 @@ public class AuthService {
         AdminUser admin = adminUserRepository.findByUsername(request.username())
                 .orElseThrow(() -> new BadRequestException("Invalid username or password"));
 
-        if (!passwordEncoder.matches(request.password(), admin.getPasswordHash())) {
+        if (!passwordEncoder.matches(request.password(), admin.getPassword())) {
             throw new BadRequestException("Invalid username or password");
         }
 

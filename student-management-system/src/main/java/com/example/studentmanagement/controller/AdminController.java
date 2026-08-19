@@ -19,12 +19,12 @@ public class AdminController {
         this.courseService = courseService;
     }
 
-    @PostMapping("/students")
+    @PostMapping("/createStudent")
     public StudentResponse createStudent(@Valid @RequestBody CreateStudentRequest request) {
         return studentService.create(request);
     }
 
-    @PostMapping("/courses")
+    @PostMapping("/createCourse")
     public CourseResponse createCourse(@Valid @RequestBody CourseRequest request) {
         return courseService.create(request);
     }

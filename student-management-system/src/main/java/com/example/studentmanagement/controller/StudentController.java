@@ -29,8 +29,8 @@ public class StudentController {
     }
 
     @GetMapping("/courses")
-    public List<CourseResponse> assignedCourses(Authentication authentication,
-                                                @RequestParam(required = false) String topic) {
+    public List<CourseResponse> getCourses(Authentication authentication,
+                                           @RequestParam(required = false) String topic) {
         return studentService.getAssignedCourses(studentId(authentication), topic);
     }
 
