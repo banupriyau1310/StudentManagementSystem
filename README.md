@@ -37,6 +37,9 @@ PUT /api/student/profile - Update Profile
 GET /api/student/courses - Get Courses
 DEL /api/student/courses/{{courseId}} - Leave course
 
+PostMan Collection 
+https://github.com/banupriyau1310/StudentManagementSystem/blob/master/Student%20Management%20System%20API.postman_collection.json
+
 Author
 Banu Priya U
 GitHub: banupriyau1310 (https://github.com/banupriyau1310)
